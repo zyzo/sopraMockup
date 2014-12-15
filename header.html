@@ -12,7 +12,8 @@
         </div>
 
         <div id="navbar2" class="navbar-collapse collapse navbar-right">
-            <a href="user_profile.html" id="aNavbar2"></a>
+            <a href="user_profile.html" id="aNavbar2"></a> <br>
+            <a id="disconnectButton" href="index.html" onclick="sessionStorage.setItem('signedIn', false)">Disconnect</a>
         </div><!--/.navbar-collapse -->
         <div id="navbar" class="navbar-collapse collapse">
             <form class="navbar-form navbar-right" role="form" action="user_profile.html">
@@ -31,7 +32,7 @@
 </nav>
 
 <script>
-    if (sessionStorage.getItem('signedIn') == null || sessionStorage.getItem('signedIn') == false) {
+    if (sessionStorage.getItem('signedIn') == null || sessionStorage.getItem('signedIn') == 'false') {
         $('#navbar2').attr('style', 'display : none! important');
         $('#navbar').attr("style", "display : block");
     } else {
