@@ -31,7 +31,7 @@
 </nav>
 
 <script>
-    if (sessionStorage.getItem('signedIn') == null || localStorage.getItem('signedIn') == false) {
+    if (sessionStorage.getItem('signedIn') == null || sessionStorage.getItem('signedIn') == false) {
         $('#navbar2').attr('style', 'display : none! important');
         $('#navbar').attr("style", "display : block");
     } else {
