@@ -1,0 +1,10 @@
+<template id="dialogPanelTemplate">
+    <div id="dialog" title="Main dialog" >This is the dialog panel</div>
+    <script>
+        $( "#dialog" ).dialog({
+            modal : true,
+            Ok: function() {
+                $( this ).dialog( "close" );
+            }});
+    </script>
+</template>
