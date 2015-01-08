@@ -1,0 +1,24 @@
+<!-- Example of Google embedded map -->
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="api-secret.js"></script>
+    <title></title>
+</head>
+<body>
+<iframe id="embedmap" width="600" height="450" frameborder="0" style="border:0"></iframe></body>
+<iframe id="directionmap" width="600" height="450" frameborder="0" style="border:0"></iframe></body>
+<iframe id="2directionmap" width="600" height="450" frameborder="0" style="border:0"></iframe></body>
+<script>
+    var link = "https://www.google.com/maps/embed/v1/search?q=INSA%20de%20Toulouse%2C%20Avenue%20de%20Rangueil%2C%20Toulouse%2C%20France" +
+        "&key=" + secrets.googleApiKey;
+    document.getElementById("embedmap").setAttribute("src", link);
+    var link2 = "https://www.google.com/maps/embed/v1/directions?" +
+        "origin=1+Rue+Elvire,+Toulouse,+France" +
+        "&destination=INSA+de+Toulouse,+Avenue+de+Rangueil,+Toulouse,+France" +
+        "&key=" + secrets.googleApiKey;
+    document.getElementById("directionmap").setAttribute("src", link2);
+</script>
+
+</html>
